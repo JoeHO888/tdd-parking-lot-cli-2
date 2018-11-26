@@ -3,7 +3,7 @@ package com.oocl.cultivation;
 public class SmartParkingBoy extends ParkingBoy {
 
     private final ParkingLot[] parkingLotArray;
-    private  ParkingLot parkingLot;
+    private ParkingLot parkingLot;
     private String lastErrorMessage = "Unrecognized parking ticket.";
     private  int[] parkingLotCapacityArray;
 

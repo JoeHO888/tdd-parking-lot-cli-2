@@ -4,7 +4,6 @@ public class ParkingBoy {
 
 
     private final ParkingLot[] parkingLotArray;
-    private  ParkingLot parkingLot;
     private String lastErrorMessage = "Unrecognized parking ticket.";
 
     public ParkingBoy(ParkingLot[] parkingLotArray) {
@@ -15,7 +14,7 @@ public class ParkingBoy {
     public ParkingTicket park(Car car) {
         // TODO: Please implement the method
         for (int i = 0; i < parkingLotArray.length; i++) {
-            parkingLot = parkingLotArray[i];
+            ParkingLot parkingLot = parkingLotArray[i];
             if (parkingLot.getAvailableParkingPosition()>0) {
                 ParkingTicket ticket = new ParkingTicket(car);
                 parkingLot.addCarTicketPair(ticket,car);
@@ -44,6 +43,6 @@ public class ParkingBoy {
     }
 
     public String getLastErrorMessage() {
-        return lastErrorMessage;
+        return this.lastErrorMessage;
     }
 }
