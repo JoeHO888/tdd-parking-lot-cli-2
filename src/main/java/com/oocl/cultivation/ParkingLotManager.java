@@ -55,7 +55,7 @@ public class ParkingLotManager {
     public Car fetch(ParkingTicket ticket) {
         // TODO: Please implement the method
         if (ticket!=null){
-            if (ticket.availability) {
+            if (ticket.getAvailability()) {
                 return ticket.getCar();
             }else{
                 lastErrorMessage = "Unrecognized parking ticket.";

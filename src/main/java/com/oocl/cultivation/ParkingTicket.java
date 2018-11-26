@@ -11,4 +11,8 @@ public class ParkingTicket {
         availability = false;
         return this.car;
     }
+
+    public Boolean getAvailability() {
+        return this.availability;
+    }
 }

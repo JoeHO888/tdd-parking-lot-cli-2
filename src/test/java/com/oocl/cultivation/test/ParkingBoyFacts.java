@@ -7,14 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class ParkingBoyFacts {
 
     private ParkingLot[] parkingLotArray;
-    private  ParkingLot parkingLot;
     private ParkingBoy parkingBoy;
 
     @Before
     public void beforeFunction() {
         parkingLotArray = new ParkingLot[1];
-        parkingLot = new ParkingLot();
-        parkingLotArray[0] = parkingLot;
+        parkingLotArray[0] = new ParkingLot();
         parkingBoy = new ParkingBoy(parkingLotArray);
     }
 
