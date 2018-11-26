@@ -16,14 +16,18 @@ public class ParkingBoy {
         for (int i = 0; i < parkingLotArray.length; i++) {
             ParkingLot parkingLot = parkingLotArray[i];
             if (parkingLot.getAvailableParkingPosition()>0) {
-                ParkingTicket ticket = new ParkingTicket(car);
-                parkingLot.addCarTicketPair(ticket,car);
-                lastErrorMessage = null;
-                return ticket;
+                return this.getTicket(parkingLot,car);
             }
         }
         lastErrorMessage = "Not enough position.";
         return null;
+    }
+
+    private ParkingTicket getTicket(ParkingLot parkingLot, Car car){
+        ParkingTicket ticket = new ParkingTicket(car);
+        parkingLot.addCarTicketPair(ticket,car);
+        this.lastErrorMessage = null;
+        return ticket;
     }
 
 
