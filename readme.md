@@ -70,3 +70,15 @@ AC1. The parking lot service manager can add parking boys to management list. An
 AC2. The parking lot service manager can also manage parking lots. And (s)he can park or fetch the car just as a standard parking boy (*Story 3*). Note that (s)he can only store and fetch the car from his/her own parking lots.
 
 AC3. If the manager tells the parking boy to park or fetch the car, then the manager should be able to display the error message to the customer if the parking boy failed to do the operation.
+
+
+
+
+
+
+
+
+
+# Code Smell: 
+- Long Method in fetch(), park(),looping in parking boy, smart parking boy and super smart parking boy
+- Duplicate -> if(s) and return
